@@ -4,7 +4,7 @@ from langchain_community.llms import Ollama
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
 
-llm = Ollama(model = "mistral")
+llm = Ollama(model = "llama3.2")
 
 prompt_template = PromptTemplate(
     input_variables = ["city", "month", "language", "budget"],
