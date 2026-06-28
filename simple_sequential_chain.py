@@ -25,7 +25,7 @@ speech_prompt = PromptTemplate(
 )
 
 
-chain_1 = title_prompt | llm | StrOutputParser()
+chain_1 = title_prompt | llm | StrOutputParser() | (lambda title: (st.write(title),title)[1])
 chain_2 = speech_prompt | llm
 final_chain = chain_1 | chain_2
 
